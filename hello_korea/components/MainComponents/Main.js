@@ -6,15 +6,12 @@ import Body from './Body';
 
 export default function Main() {
   return (
-    <>
       <S.Wrapper>
          <S.Container>
             <Header />
             <Body />
-            
         </S.Container>
       </S.Wrapper>
-    </>
   );
 }
 
