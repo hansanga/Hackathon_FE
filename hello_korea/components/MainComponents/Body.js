@@ -23,6 +23,8 @@ export default function Body(){
             </S.MenuTabTitle>
          </S.MenuTabImg>
 
+    {/*      <S.ShortBorder /> */}
+
          <S.Line />
          <S.MenuBottom1>
             <S.MenuBottom1Icon src='img/free-icon-siren-883345.png' />
