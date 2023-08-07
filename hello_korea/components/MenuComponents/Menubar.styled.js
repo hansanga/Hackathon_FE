@@ -55,7 +55,7 @@ export const CategoryContainer = styled.div`
   width: 250px;
   height: 100%;
   padding: 3px 0 0 25px;
-  /* background: #3c3; */
+  /* overflow-y: scroll; */
 `;
 
 export const PublicS = styled.div`
@@ -80,6 +80,7 @@ export const PublicApp1 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 
@@ -100,6 +101,8 @@ export const PublicApp2 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg2 = styled.img`
@@ -118,6 +121,8 @@ export const PublicApp3 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg3 = styled.img`
@@ -136,6 +141,8 @@ export const PublicApp4 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg4 = styled.img`
@@ -154,6 +161,8 @@ export const PublicApp5 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg5 = styled.img`
@@ -172,6 +181,8 @@ export const PublicApp6 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg6 = styled.img`
@@ -190,6 +201,8 @@ export const PublicApp7 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg7 = styled.img`
@@ -208,6 +221,8 @@ export const PublicApp8 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg8 = styled.img`
@@ -226,6 +241,8 @@ export const PublicApp9 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg9 = styled.img`
@@ -244,6 +261,7 @@ export const PublicApp10 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 export const Publicimg10 = styled.img`
@@ -262,6 +280,7 @@ export const PublicApp11 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 export const Publicimg11 = styled.img`
@@ -280,6 +299,8 @@ export const PublicApp12 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg12 = styled.img`
@@ -298,6 +319,8 @@ export const PublicApp13 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg13 = styled.img`
@@ -316,6 +339,8 @@ export const PublicApp14 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+
 `;
 
 export const Publicimg14 = styled.img`
@@ -334,6 +359,7 @@ export const PublicApp15 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 export const Publicimg15 = styled.img`
@@ -352,6 +378,7 @@ export const PublicApp16 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 export const Publicimg16 = styled.img`
@@ -370,6 +397,7 @@ export const PublicApp17 = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 export const Publicimg17 = styled.img`

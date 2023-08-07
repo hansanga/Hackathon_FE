@@ -34,6 +34,7 @@ export const IntroText1 = styled.div`
   position: absolute; 
   margin-top: -220px;
   margin-left: -170px;
+  cursor: default;
 `;
 
 export const IntroText2 = styled.div`
@@ -48,7 +49,7 @@ export const IntroText2 = styled.div`
   margin-left: 28px;
   line-height: 1.15;
   z-index: 3;
-  
+  cursor: default;
 `;
 
 export const MenuTabImg = styled.div`
@@ -193,5 +194,7 @@ export const Copyright = styled.div`
   justify-content: space-around;
   position: absolute;
   margin: 100px -17px;
+  cursor: default;
+
 `;
 
