@@ -17,3 +17,16 @@ export const Container = styled.div`
   align-items: center;
   padding: 10px;
 `;
+
+export const Title = styled.div`
+  color: #686868;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* 원하는 만큼 조절 */
+`;

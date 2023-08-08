@@ -65,6 +65,7 @@ export const MenuTab1 = styled.img`
    width: 95px;
    height: 95px;
    cursor: pointer;
+
 `;
 export const MenuTab2 = styled.img`
    width: 95px;
@@ -81,7 +82,7 @@ export const MenuTab3 = styled.img`
 
 export const MenuTabTitle = styled.div`
    position: absolute;
-   bottom: 0; /* 수정된 부분: 이미지 하단에 위치하도록 설정 */
+   bottom: 0;
    left: 0;
    right: 0;
    display: flex;

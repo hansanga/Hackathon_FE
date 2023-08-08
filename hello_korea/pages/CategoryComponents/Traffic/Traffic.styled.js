@@ -10,10 +10,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+   width: 100%;
   position: relative;
   display: flex;
-  flex-direction: column; /* 세로로 정렬 */
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
+  /* margin-bottom: 20px; */ /* Add margin to push Body component down */
+  /* margin-top: 20px; */ /* Add margin to create space above the Intro component */
 `;
