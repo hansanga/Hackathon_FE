@@ -24,10 +24,6 @@ export default function Body(){
             </S.MenuTabTitle>
          </S.MenuTabImg>
 
-    {/*      <S.ShortBorder /> */}
-
-
-
 
          <S.Line />
          <S.MenuBottom1>

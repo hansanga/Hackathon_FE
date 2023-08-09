@@ -43,8 +43,8 @@ export const Search = styled.input`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
   position: absolute;
   top: 80px;
-  left: 50%; /* Adjust the left value */
-  transform: translateX(-50%); /* Center the input horizontally */
+  left: 50%; 
+  transform: translateX(-50%); 
   padding-left: 53px; 
   ::placeholder {
    color: #DADADA;

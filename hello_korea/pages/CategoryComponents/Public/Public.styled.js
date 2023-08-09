@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   display: flex;
-  flex-direction: column; /* 세로로 정렬 */
+  flex-direction: column; 
   align-items: center;
   padding: 10px;
 `;
@@ -28,5 +28,5 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px; /* 원하는 만큼 조절 */
+  margin-bottom: 20px;
 `;

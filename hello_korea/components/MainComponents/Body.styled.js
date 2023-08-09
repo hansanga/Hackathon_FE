@@ -16,12 +16,12 @@ export const Intro = styled.div`
   border-radius: 15px;
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-  position: relative; /* 수정된 부분: position 속성 변경 */
-  margin-top: 140px; /* Adjust the margin-top value as needed */
-  padding: 20px; /* Add some padding to create space inside the box */
+  position: relative; 
+  margin-top: 140px; 
+  padding: 20px; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center the text */
+  justify-content: center;
 `;
 
 export const IntroText1 = styled.div`
@@ -30,7 +30,7 @@ export const IntroText1 = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-bottom: 10px; /* Add some margin to create space between the texts */
+  margin-bottom: 10px; 
   position: absolute; 
   margin-top: -220px;
   margin-left: -170px;
@@ -96,26 +96,26 @@ export const MenuTabTitle = styled.div`
 
 export const MenuTitle1 = styled.div`
    font-size: 10px;
-   flex: 1; /* 수정된 부분 */
+   flex: 1; 
    margin-top: -55px;
    margin-left: -1px;
-   text-align: center; /* 추가된 부분 */
+   text-align: center; 
 `;
 
 export const MenuTitle2 = styled.div`
    font-size: 10px;
-   flex: 2; /* 수정된 부분 */
+   flex: 2; 
    margin-top: -52px;
    margin-left: -1px;
-   text-align: center; /* 추가된 부분 */
+   text-align: center; 
 `;
 
 export const MenuTitle3 = styled.div`
    font-size: 10px;
-   flex: 1; /* 수정된 부분 */
+   flex: 1;
    margin-top: -52px;
    margin-left: -1px;
-   text-align: center; /* 추가된 부분 */
+   text-align: center; 
 `;
 
 export const Line = styled.div`
