@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './App.styled'
+import * as S from './App.styled';
 import Header from '../../../components/MainComponents/Header';
 
 export default function App(){

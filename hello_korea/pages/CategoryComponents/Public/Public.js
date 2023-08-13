@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './Public.styled'
+import * as S from './Public.styled';
 import Header from '../../../components/MainComponents/Header';
 
 export default function Public(){

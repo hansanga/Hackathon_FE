@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './Traffic.styled'
+import * as S from './Traffic.styled';
 import Header from '../../../components/MainComponents/Header';
 
 
