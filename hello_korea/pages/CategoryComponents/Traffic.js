@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './Traffic.styled.js';
-import Header from '../../../components/MainComponents/Header';
+import * as S from '../../styles/CategoryComponents/Traffic.styled';
+import Header from '../../components/MainComponents/Header';
 
 
 export default function Traffic(){

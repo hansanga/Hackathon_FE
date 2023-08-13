@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './Public.styled.js';
-import Header from '../../../components/MainComponents/Header';
+import * as S from '../../styles/CategoryComponents/Public.styled';
+import Header from '../../components/MainComponents/Header';
 
 export default function Public(){
    return (
