@@ -28,19 +28,21 @@ export default function Body(){
         </S.Top>
 
         <TipBox />
-        <MenuBox
+         <MenuBox
+            link="/CategoryComponents/Tip"
             iconSrc='\img\Subway.svg'
             text1='KaKao Subway'
             text2='The most popular Korean subway application'
          />
-        <MenuBox
+         <MenuBox
+            link="/CategoryComponents/Tip"
             iconSrc='\img\Traffic.svg'
             text1='KaKao Bus'
             text2='The most popular Korean Bus application'
          />
 
          <S.CopyrightContainer>
-            <S.Copyright>@ Cpoyright</S.Copyright>
+            <S.Copyright>@ Copyright</S.Copyright>
          </S.CopyrightContainer>
 
         
