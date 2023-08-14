@@ -114,7 +114,6 @@ export const MenuBottom1Text1 = styled.div`
 
 export const MenuBottom1Text2 = styled.div`
   position: absolute;
-  width: 100%;
   height: 8px;
   font-style: normal;
   font-weight: 500;
@@ -122,13 +121,14 @@ export const MenuBottom1Text2 = styled.div`
   line-height: 10px;
   color: #737373;
   text-align: left;
-  margin: 28px 0 25px 60px;
+  margin-top: 28px;
+  margin-left: 60px;
 `;
  
 
 export const CopyrightContainer = styled.div`
-   width: 100%;
-   height: 100%;
+   display: flex;
+  flex-direction: column;
 
 `
 
@@ -145,7 +145,7 @@ export const Copyright = styled.div`
   align-items: center;
   justify-content: space-around;
   position: relative;
-  margin: 220px -10px 0;
+  margin-top: 200px;
   cursor: default;
 
 `;
