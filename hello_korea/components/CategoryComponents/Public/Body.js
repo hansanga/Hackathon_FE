@@ -1,41 +1,42 @@
 import React from 'react';
 import * as S from "./Body.styled";
 import TipBox from '../../../components/TipComponents/TipBox';
-import MenuBox from '../../../components/AppComponents/MenuBox';
+import Comprehensive from './Category/Comprehensive';
+import Safety from './Category/Safety';
 import Link from 'next/link'
 
-export default function Body(){
+export default function Body({ selectedItem, onItemClick }) {
+
+   const ContentComponents = [Comprehensive, Safety, ];
+   const menuItems = ['Comprehensive Certification', 'Safety',];
+   let contentComponent;
+   if (selectedItem !== null) {
+      contentComponent = ContentComponents[selectedItem]();
+   } else {
+      contentComponent = Comprehensive();
+   }
+
   return (
    
 <S.Container>
         <S.Title>Public Service</S.Title>
-        <S.MenuBar>
-           <li>Comprehensive Certification</li>
-           <li>Safety</li>
+        <S.MenuBar onItemClick={onItemClick}>
+           {menuItems.map((item, index) => (
+              <li
+                 key={index}
+                 isSelected={index === selectedItem}
+                 onClick={() => onItemClick(index)}
+                 style={{ color: index === selectedItem ? '#007bff' : '#686868' }}>
+            {item}
+            </li>
+           ))}
         </S.MenuBar>
         <S.Line />
         <TipBox />
-        <MenuBox
-            link="/CategoryComponents/Tip"
-            iconSrc='\img\Subway.svg'
-            text1='KaKao Subway'
-            text2='The most popular Korean subway application'
-         />
-        <MenuBox
-            link="/CategoryComponents/Tip"
-            iconSrc='\img\Traffic.svg'
-            text1='KaKao Bus'
-            text2='The most popular Korean Bus application'
-         />
-
+        {contentComponent}
          <S.CopyrightContainer>
             <S.Copyright>@ Copyright</S.Copyright>
          </S.CopyrightContainer>
-
-        
-
       </S.Container>
-      
-   
   );
 };

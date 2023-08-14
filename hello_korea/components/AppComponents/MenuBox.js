@@ -1,3 +1,4 @@
+// 카테고리 페이지 앱박스
 import React from 'react';
 import * as S from "./MenuBox.styled"; 
 import Link from 'next/link'

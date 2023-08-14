@@ -1,34 +1,41 @@
 import React from 'react';
 import * as S from "./Body.styled";
 import TipBox from '../../../components/TipComponents/TipBox';
-import MenuBox from '../../../components/AppComponents/MenuBox';
+import Map from './Category/Map';
+import Public from './Category/Public';
+import Navigation from './Category/Navigation';
+import Taxi from './Category/Taxi';
 import Link from 'next/link'
 
-export default function Body(){
+export default function Body({ selectedItem, onItemClick }) {
+
+   const ContentComponents = [Map, Public, Navigation, Taxi ];
+   const menuItems = ['Map', 'Public Transport', 'Navigation', 'Taxi'];
+   let contentComponent;
+   if (selectedItem !== null) {
+      contentComponent = ContentComponents[selectedItem]();
+   } else {
+      contentComponent = Map();
+   }
+
   return (
 
      <S.Container>
         <S.Title>Map / Traffic Service</S.Title>
-        <S.MenuBar>
-           <li>Map</li>
-           <li>Public Transport</li>
-           <li>Navigation</li>
-           <li>Taxi</li>
+        <S.MenuBar onItemClick={onItemClick}>
+           {menuItems.map((item, index) => (
+              <li
+                 key={index}
+                 isSelected={index === selectedItem}
+                 onClick={() => onItemClick(index)}
+                 style={{ color: index === selectedItem ? '#007bff' : '#686868' }}>
+            {item}
+            </li>
+           ))}
         </S.MenuBar>
         <S.Line />
         <TipBox />
-        <MenuBox
-            link="/CategoryComponents/Tip"
-            iconSrc='\AppIcon\KaKaoSubway.svg'
-            text1='KaKao Subway'
-            text2='The most popular Korean subway application'
-         />
-        <MenuBox
-            link="/CategoryComponents/Tip"
-            iconSrc='\AppIcon\KaKaoBus.svg'
-            text1='KaKao Bus'
-            text2='The most popular Korean Bus application'
-         />
+        {contentComponent}
 
          <S.CopyrightContainer>
             <S.Copyright>@ Copyright</S.Copyright>
