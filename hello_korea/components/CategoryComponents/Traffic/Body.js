@@ -18,18 +18,20 @@ export default function Body(){
         <S.Line />
         <TipBox />
         <MenuBox
-            iconSrc='\img\Subway.svg'
+            link="/InfoComponents/Traffic/KaKaoSubway"
+            iconSrc='\AppIcon\KaKaoSubway.svg'
             text1='KaKao Subway'
             text2='The most popular Korean subway application'
          />
         <MenuBox
-            iconSrc='\img\Traffic.svg'
+            link="/InfoComponents/Traffic/KaKaoBus"
+            iconSrc='\AppIcon\KaKaoBus.svg'
             text1='KaKao Bus'
             text2='The most popular Korean Bus application'
          />
 
          <S.CopyrightContainer>
-            <S.Copyright>@ Cpoyright</S.Copyright>
+            <S.Copyright>@ Copyright</S.Copyright>
          </S.CopyrightContainer>
 
         
