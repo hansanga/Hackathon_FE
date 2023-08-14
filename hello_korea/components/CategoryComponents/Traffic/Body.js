@@ -18,13 +18,13 @@ export default function Body(){
         <S.Line />
         <TipBox />
         <MenuBox
-            link="/InfoComponents/Traffic/KaKaoSubway"
+            link="/CategoryComponents/Tip"
             iconSrc='\AppIcon\KaKaoSubway.svg'
             text1='KaKao Subway'
             text2='The most popular Korean subway application'
          />
         <MenuBox
-            link="/InfoComponents/Traffic/KaKaoBus"
+            link="/CategoryComponents/Tip"
             iconSrc='\AppIcon\KaKaoBus.svg'
             text1='KaKao Bus'
             text2='The most popular Korean Bus application'
