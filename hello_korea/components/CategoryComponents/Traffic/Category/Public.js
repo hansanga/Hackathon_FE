@@ -7,13 +7,13 @@ export default function Content(){
         <>
         <MenuBox
             link="/InfoComponents/Traffic/KaKaoSubway"
-            iconSrc='\AppIcon\KaKaoSubway.png'
+            iconSrc='\AppIcon\KakaoSubway.png'
             text1='KaKao Subway'
             text2='The most popular Korean subway application'
          />
         <MenuBox
             link="/InfoComponents/Traffic/KaKaoBus"
-            iconSrc='\AppIcon\KaKaoBus.png'
+            iconSrc='\AppIcon\KakaoBus.png'
             text1='KaKao Bus'
             text2='The most popular Korean Bus application'
             />
