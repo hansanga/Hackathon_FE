@@ -20,13 +20,13 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 5px auto;
 `;
 
 export const MenuBar = styled.div`
     display: flex;
     listStyle: none;
-    padding: 0;
+    margin: 5px;
 
     & > li {
       margin: 0;
@@ -113,7 +113,7 @@ export const Copyright = styled.div`
   align-items: center;
   justify-content: space-around;
   position: absolute;
-  margin: 200px -17px;
+  margin: 220px -10px 0;
   cursor: default;
 
 `;

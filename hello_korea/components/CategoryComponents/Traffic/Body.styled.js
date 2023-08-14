@@ -2,12 +2,11 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 120px auto;
+  margin-top: 120px;
 `;
 
 export const Title = styled.div`
@@ -20,13 +19,13 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 5px auto;
 `;
 
 export const MenuBar = styled.div`
     display: flex;
     listStyle: none;
-    padding: 0;
+    margin: 5px;
 
     & > li {
       margin: 0;
@@ -111,8 +110,8 @@ export const Copyright = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
-  margin: 200px -17px;
+  position: relative;
+  margin: 220px -10px 0;
   cursor: default;
 
 `;

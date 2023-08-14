@@ -1,12 +1,15 @@
 import React from 'react';
 import * as S from '../../styles/CategoryComponents/App.styled';
 import Header from '../../components/MainComponents/Header';
+import Body from '../../components/CategoryComponents/App/Body';
 
 export default function App(){
    return (
       <S.Wrapper>
-         <Header />
-         <h1>App..</h1>
+        <S.Container>
+            <Header />
+            <Body />
+         </S.Container>
       </S.Wrapper>
    );
 };

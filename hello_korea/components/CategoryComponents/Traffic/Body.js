@@ -7,10 +7,10 @@ export default function Body(){
   return (
 
      <S.Container>
-        <S.Title>Traffic Service</S.Title>
+        <S.Title>Map / Traffic Service</S.Title>
         <S.MenuBar>
            <li>Map</li>
-           <li>Public</li>
+           <li>Public Transport</li>
            <li>Navigation</li>
            <li>Taxi</li>
         </S.MenuBar>
