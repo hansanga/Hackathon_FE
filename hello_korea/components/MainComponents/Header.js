@@ -15,7 +15,7 @@ export default function Header(){
       <S.MenuBar src="/img/menubar.png" onClick={toggleMenu} menuVisible={menuVisible} />
       <S.Search type="text" placeholder="map" />
       <S.Hash src="/img/free-icon-hashtag-7710731.png" />
-      <S.SearchImg src="/img/search.png" />
+      <S.SearchImg src="/img/Search.svg" />
       {menuVisible && <MenuBar menuVisible={menuVisible} onClick={toggleMenu} />}
     </S.Container>
   );
