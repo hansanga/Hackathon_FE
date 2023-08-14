@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from "./Body.styled";
 import TipBox from '../../../components/TipComponents/TipBox';
+import MenuBox from '../../../components/AppComponents/MenuBox';
 import Link from 'next/link'
 
 export default function Body(){
@@ -16,15 +17,16 @@ export default function Body(){
         </S.MenuBar>
         <S.Line />
         <TipBox />
-        <S.MenuBottom>
-            <S.MenuBottom1Icon src='\img\Subway.svg' />
-           <S.MenuBottom1Text1>KaKao Subway</S.MenuBottom1Text1>
-           <S.MenuBottom1Text2>The most popular Korean subway application</S.MenuBottom1Text2>
-        </S.MenuBottom>
-        <S.MenuBottom>
-            <S.MenuBottom1Icon src='\img\Traffic.svg' />
-            <S.MenuBottom1Text1>KaKao Bus</S.MenuBottom1Text1>
-        </S.MenuBottom>
+        <MenuBox
+            iconSrc='\img\Subway.svg'
+            text1='KaKao Subway'
+            text2='The most popular Korean subway application'
+         />
+        <MenuBox
+            iconSrc='\img\Traffic.svg'
+            text1='KaKao Bus'
+            text2='The most popular Korean Bus application'
+         />
 
          <S.CopyrightContainer>
             <S.Copyright>@ Cpoyright</S.Copyright>
