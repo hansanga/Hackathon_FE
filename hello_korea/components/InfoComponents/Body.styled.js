@@ -45,6 +45,7 @@ export const Info = styled.div`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
+  white-space: pre-line;
   font-size: 9px;
   line-height: 11px;
   color: #737373;
