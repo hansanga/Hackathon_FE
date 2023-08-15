@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Container = styled.div `
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +10,7 @@ export const Container = styled.div`
   margin-top: 120px;
 `;
 
-export const Top = styled.div`
+export const Top = styled.div `
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@ export const Top = styled.div`
   padding: 0 35px;
 `;
 
-export const Title = styled.div`
+export const Title = styled.div `
   color: #686868;
   font-family: Inter;
   font-size: 16px;
@@ -31,7 +32,7 @@ export const Title = styled.div`
   margin: 5px auto;
 `;
 
-export const MenuBar = styled.div`
+export const MenuBar = styled.div `
     display: flex;
     listStyle: none;
     margin: 5px;
@@ -68,14 +69,13 @@ export const MenuBar = styled.div`
     }
 `;
 
-export const Line = styled.div`
+export const Line = styled.div `
    border-bottom : 1px solid #000;
 `;
- 
 
 export const CopyrightContainer = styled.div`
-   display: flex;
-  flex-direction: column;
+   width: 100%;
+   height: 100%;
 
 `
 
@@ -91,9 +91,8 @@ export const Copyright = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  margin-top: 200px;
+  position: fixed;
+  bottom: 0;
+  margin: 0 -10px;
   cursor: default;
-
 `;
-

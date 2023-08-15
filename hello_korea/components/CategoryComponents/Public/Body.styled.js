@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Container = styled.div `
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 120px auto;
 `;
 
-export const Title = styled.div`
+export const Title = styled.div `
   color: #686868;
   font-family: Inter;
   font-size: 16px;
@@ -23,7 +23,7 @@ export const Title = styled.div`
   margin: 5px auto;
 `;
 
-export const MenuBar = styled.div`
+export const MenuBar = styled.div `
     display: flex;
     listStyle: none;
     margin: 5px;
@@ -41,11 +41,11 @@ export const MenuBar = styled.div`
     }
 `;
 
-export const Line = styled.div`
+export const Line = styled.div `
    border-bottom : 1px solid #000;
 `;
 
-export const MenuBottom = styled.div`
+export const MenuBottom = styled.div `
   width: 299px;
   height: 63px;
   left: 27px;
@@ -58,7 +58,7 @@ export const MenuBottom = styled.div`
   display: flex;
 `;
 
-export const MenuBottom1Icon = styled.img`
+export const MenuBottom1Icon = styled.img `
    width: 41px;
    height: 38px;
    position: absolute;
@@ -66,7 +66,7 @@ export const MenuBottom1Icon = styled.img`
    text-align: center;
 `;
 
-export const MenuBottom1Text1 = styled.div`
+export const MenuBottom1Text1 = styled.div `
   position: absolute;
   width: 137px;
   height: 8px;
@@ -80,7 +80,7 @@ export const MenuBottom1Text1 = styled.div`
   margin: 10px 60px;
 `;
 
-export const MenuBottom1Text2 = styled.div`
+export const MenuBottom1Text2 = styled.div `
   position: absolute;
   height: 8px;
   font-style: normal;
@@ -92,15 +92,14 @@ export const MenuBottom1Text2 = styled.div`
   margin-top: 28px;
   margin-left: 60px;
 `;
- 
 
-export const CopyrightContainer = styled.div`
+export const CopyrightContainer = styled.div `
    width: 100%;
    height: 100%;
 
 `
 
-export const Copyright = styled.div`
+export const Copyright = styled.div `
   width: 358px;
   height: 70px;
   background: #4979D1;
@@ -112,11 +111,9 @@ export const Copyright = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
-  margin: 220px -10px 0;
+  position: fixed;
+  bottom: 0;
+  margin: 0 -10px;
   cursor: default;
 
 `;
-
-
-

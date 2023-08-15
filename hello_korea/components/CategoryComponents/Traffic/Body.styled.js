@@ -110,9 +110,9 @@ export const Copyright = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  margin: 220px -10px 0;
+  position: fixed;
+  bottom: 0;
+  margin: 0 -10px;
   cursor: default;
-
 `;
 
