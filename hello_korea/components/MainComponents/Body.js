@@ -32,7 +32,7 @@ export default function Body(){
          </S.MenuBottom1>
          <S.MenuBottom2>
             <S.MenuBottom2Icon src='img/Question answer.png' />
-            <S.MenuBottom1Text>Questions</S.MenuBottom1Text>
+            <S.MenuBottom1Text>FAQ</S.MenuBottom1Text>
 
          </S.MenuBottom2>
 
