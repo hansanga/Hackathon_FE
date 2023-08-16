@@ -7,9 +7,9 @@ export default function Goverment24() {
     const handleDownload = () => {
         // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
         if (navigator.userAgent.match(/Android/i)) {
-            window.location.href = '링크_Google_Play_Store';
+            window.location.href = 'https://play.google.com/store/search?q=%EC%A0%95%EB%B6%8024&c=apps&hl=ko-KR';
         } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            window.location.href = '링크_App_Store';
+            window.location.href = 'https://apps.apple.com/kr/app/%EC%A0%95%EB%B6%8024-%EA%B5%AC-%EB%AF%BC%EC%9B%9024/id586454505';
         }
     };
 
