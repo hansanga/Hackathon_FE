@@ -35,7 +35,7 @@ export default function Body({selectedItem, onItemClick}) {
                 }
             </S.MenuBar>
             <S.Line/>
-            <TipBox/> 
+             
             {contentComponent}
             <S.CopyrightContainer>
                 <S.Copyright>@ Copyright</S.Copyright>

@@ -33,6 +33,7 @@ export const TipText = styled.div`
    margin: auto 40px;
 `;
 
+
 export const MoveImg = styled.img`
    width: 8px;
    height: 15px;
@@ -40,4 +41,4 @@ export const MoveImg = styled.img`
    cursor: pointer;
    position: absolute;
    text-align: center;
-`
+`;
