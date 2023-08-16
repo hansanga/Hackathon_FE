@@ -3,6 +3,7 @@ import axios from 'axios';
 import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
+import Link from 'next/link'
 
 export default function MobileID() {
     const [data, setData] = useState(null); // API로부터 받아온 데이터를 저장할 상태
