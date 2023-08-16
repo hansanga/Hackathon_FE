@@ -1,10 +1,10 @@
 
 
 class PostDTO {
-  constructor(title, contents, serverLink, hashtag) {
+  constructor(title, contents, serviceLink, hashtag) {
     this.title = title;
     this.contents = contents;
-    this.serverLink = serverLink;
+    this.serviceLink = serviceLink;
     this.hashtag = hashtag;
   }
 
@@ -16,8 +16,8 @@ class PostDTO {
     return this.contents;
   }
     
-  getServerLink() {
-    return this.serverLink;
+  getServiceLink() {
+    return this.serviceLink;
   }
 
   getHashtag() {

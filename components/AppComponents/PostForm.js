@@ -5,7 +5,7 @@ import * as S from "./PostForm.styled";
 function PostForm() {
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
-  const [serverLink, setServerLink] = useState('');
+  const [servicerLink, setServiceLink] = useState('');
   const [hashtag, setHashtag] = useState('');
 
   const handleSubmit = () => {
@@ -46,8 +46,8 @@ function PostForm() {
         <S.TextArea value={contents} onChange={e => setContents(e.target.value)} />
       </S.InputGroup>
       <S.InputGroup>
-        <S.Label>서버 링크</S.Label>
-        <S.Input type="text" value={serverLink} onChange={e => setServerLink(e.target.value)} />
+        <S.Label>서비스 링크</S.Label>
+        <S.Input type="text" value={serverLink} onChange={e => setServiceLink(e.target.value)} />
       </S.InputGroup>
       <S.InputGroup>
         <S.Label>해시태그</S.Label>
