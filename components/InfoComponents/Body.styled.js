@@ -52,6 +52,11 @@ export const Info = styled.div`
   padding: 0 30px;
 `;
 
+export const AppInfo = styled.div`
+  width: 267px;
+  height: 451px;
+`;
+
 export const BtnZone = styled.div`
   flex-direction: row;
   padding: 10px 20px;
