@@ -1,15 +1,23 @@
 import React from 'react';
+import axios from 'axios';
 import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
 export default function Hometax() {
-    const handleDownload = () => {
-        // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
-        if (navigator.userAgent.match(/Android/i)) {
-            window.location.href = 'https://play.google.com/store/search?q=%ED%99%88%ED%83%9D%EC%8A%A4&c=apps&hl=ko-KR';
-        } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            window.location.href = 'https://apps.apple.com/kr/app/%EA%B5%AD%EC%84%B8%EC%B2%AD-%ED%99%88%ED%83%9D%EC%8A%A4-%EC%86%90%ED%83%9D%EC%8A%A4/id495157796';
+    const handleDownload = async () => {
+        try {
+            const response = await axios.post('your_download_api_endpoint', {
+                title: 'test_59fdbe81a9e4',
+                contents: 'test_39d093cca35f',
+                serverLink: 'test_2d7f82b16f0b',
+                hashtag: 'happ, hap, happy , d , dd , dddd, anna'
+            });
+
+            // Handle response here if needed
+        } catch (error) {
+            console.error('Error during download:', error);
+            alert('Download failed. Please try again later.');
         }
     };
 
@@ -18,17 +26,28 @@ export default function Hometax() {
             if (navigator.share) {
                 await navigator.share({
                     title: 'catchKorea',
-                    text: '내용뭐라고,,,',
+                    text: '내용..',
                     url: window.location.href,
                 });
+
+                // After successful share, send API request
+                const response = await axios.post('your_share_api_endpoint', {
+                    title: 'test_59fdbe81a9e4',
+                    contents: 'test_39d093cca35f',
+                    serverLink: 'test_2d7f82b16f0b',
+                    hashtag: 'happ, hap, happy , d , dd , dddd, anna'
+                });
+
+                // Handle response here if needed
             } else {
                 throw new Error('Web Share API not supported');
             }
         } catch (error) {
-            console.error('Error sharing:', error);
+            console.error('Error during sharing:', error);
             alert('Sharing failed. Please try again later.');
         }
     };
+
     return (
         <S.Wrapper>
             <S.Container>
