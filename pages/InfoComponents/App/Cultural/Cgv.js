@@ -52,9 +52,9 @@ export default function CGV() {
                 <Header />
                 {data ? (
                     <Body
+                        iconSrc1='\AppIcon\Cgv.png'
                         appName={data.title} // API 응답 데이터에 있는 앱 이름 필드
                         text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
-                        isselected={false} // 해당 부분은 명세서에서 정확한 값을 확인해야 합니다.
                         handleDownload={handleDownload}
                         handleShare={handleShare}
                     />

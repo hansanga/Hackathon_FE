@@ -52,12 +52,12 @@ export default function Goverment() {
                 <Header />
                 {data ? (
                     <Body
-                        iconSrc1={data.iconSrc} // API 응답 데이터에 있는 이미지 경로 필드
-                        appName={data.appName} // API 응답 데이터에 있는 앱 이름 필드
-                        text1={data.appDescription} // API 응답 데이터에 있는 앱 설명 필드
-                        isselected={data.isselected} // 수정된 부분
+                        iconSrc1='\AppIcon\Goverment24.png'
+                        appName={data.title}
+                        text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                         handleDownload={handleDownload}
                         handleShare={handleShare}
+
                     />
                 ) : (
                     <p>Loading...</p>

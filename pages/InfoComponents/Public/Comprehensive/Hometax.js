@@ -54,11 +54,8 @@ export default function Hometax() {
                 <Header/>
                 <Body
                     iconSrc1='\AppIcon\Hometax.png'
-                    appName='Hometax'
-                    text1={`
-                    The National Tax Service Hometex is an Internet comprehensive national tax service that allows you to conveniently report and pay taxes, issue civil petition certificates, simplify year-end settlement, check and issue cash receipts, and check and issue electronic tax invoices without visiting the tax office. Foreigners can apply for year-end settlement using Hometex.
-
-                    How to download : You can install on the app store or Play Store.`} 
+                    appName={data.title}
+                    text1={data.contents}
                     handleDownload={handleDownload}
                     handleShare={handleShare}
                     />
