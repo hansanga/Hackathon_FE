@@ -8,8 +8,8 @@ export default function Body({ iconSrc1, appName, text1 }) {
         try {
             if (navigator.share) {
                 await navigator.share({
-                    title: 'My App',
-                    text: 'Check out this amazing app!',
+                    title: 'catchKorea',
+                    text: '내용뭐라고,,,',
                     url: window.location.href,
                 });
             } else {

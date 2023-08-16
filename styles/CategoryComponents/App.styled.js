@@ -17,3 +17,12 @@ export const Container = styled.div`
   align-items: center;
   padding: 10px;
 `;
+
+export const ImageContainer = styled.div`
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 16px;
+`;
+

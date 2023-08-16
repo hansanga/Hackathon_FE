@@ -25,6 +25,7 @@ export const Logo = styled.div`
   font-size: 15px;
   line-height: 18px;
   color: #686868;
+  cursor: default;
 `;
 
 export const MenuBar = styled.img`
