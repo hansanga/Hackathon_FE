@@ -35,7 +35,7 @@ export const MenuIcon = styled.img`
   left: 10px;  
   cursor: pointer;
 `;
-export const MenuText = styled.div`
+export const MenuText = styled.img`
   position: absolute;
   top: 18px;
   left: 50px;
