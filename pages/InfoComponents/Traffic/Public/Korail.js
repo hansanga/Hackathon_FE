@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 import * as S from '../../../../styles/CategoryComponents/App.styled'
