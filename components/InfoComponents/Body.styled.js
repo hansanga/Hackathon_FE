@@ -52,7 +52,7 @@ export const Info = styled.div`
   padding: 0 30px;
 `;
 
-export const AppInfo = styled.div`
+export const AppInfo = styled.img`
   width: 267px;
   height: 451px;
 `;
