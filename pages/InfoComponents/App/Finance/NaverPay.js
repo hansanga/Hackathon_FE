@@ -1,7 +1,4 @@
-import React from 'react';import React, { useState } from 'react';import axios from 'axios';
-
-import axios from 'axios';
-
+import React, { useState } from 'react';
 import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
