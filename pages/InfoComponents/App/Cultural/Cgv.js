@@ -54,7 +54,7 @@ export default function CGV() {
                 <Header />
                     <Body
                         iconSrc1='\AppIcon\Cgv.png'
-                        appName={data.title} // API 응답 데이터에 있는 앱 이름 필드
+                        appName={data.title}
                         text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                         handleDownload={handleDownload}
                         handleShare={handleShare}
