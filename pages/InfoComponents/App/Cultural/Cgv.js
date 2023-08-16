@@ -8,16 +8,19 @@ export default function CGV() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}'); // 백엔드 API 엔드포인트
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
             const jsonData = await response.json();
-            setData(jsonData); // API로부터 받은 데이터를 상태에 저장
+
+            if (jsonData) {
+                setData(jsonData); // API로부터 받은 데이터를 상태에 저장
+            }
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
 
     useEffect(() => {
-        fetchData(); // 컴포넌트가 렌더링될 때 데이터를 가져오도록 설정
+        fetchData();
     }, []);
 
     const handleDownload = () => {
@@ -51,13 +54,15 @@ export default function CGV() {
         <S.Wrapper>
             <S.Container>
                 <Header />
-                    <Body
-                        iconSrc1='\AppIcon\Cgv.png'
-                        appName={data.title}
-                        text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
-                        handleDownload={handleDownload}
-                        handleShare={handleShare}
-                    />
+                {data !== null && (
+                <Body
+                    iconSrc1='\AppIcon\Cgv.png'
+                    appName={data.title}
+                    text1={data.contents}
+                    handleDownload={handleDownload}
+                    handleShare={handleShare}
+                />
+            )}
             </S.Container>
         </S.Wrapper>
     );
