@@ -37,7 +37,7 @@ export default function Cgv() {
                         iconSrc1={data.iconSrc} // API 응답 데이터에 있는 이미지 경로 필드
                         appName={data.appName} // API 응답 데이터에 있는 앱 이름 필드
                         text1={data.appDescription} // API 응답 데이터에 있는 앱 설명 필드
-                        img="/img/cgv.png" // 이미지 파일명
+                        img="img/cgv.png" // 이미지 파일명
                         isselected={data.isSelected}
                         handleDownload={handleDownload}
                         handleShare={handleShare}
