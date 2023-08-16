@@ -61,4 +61,4 @@ export default function Jiro() {
             </S.Container>
         </S.Wrapper>
     );
-};                        
+}
