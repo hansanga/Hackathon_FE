@@ -3,7 +3,7 @@ import * as S from '../../../../styles/CategoryComponents/App.styled';
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
-export default function Goverment24() {
+export default function Goverment() {
     const [data, setData] = useState(null); // API로부터 받아온 데이터를 저장할 상태
 
     const fetchData = async () => {
