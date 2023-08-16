@@ -19,7 +19,7 @@ function PostForm() {
 
     const category_id = 123; 
 
-    fetch(`/post/${category_id}`, {
+    fetch(`https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
