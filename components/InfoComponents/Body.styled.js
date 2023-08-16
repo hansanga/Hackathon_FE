@@ -55,6 +55,8 @@ export const Info = styled.div`
 export const AppInfo = styled.img`
   width: 267px;
   height: 451px;
+  z-index: 3;
+  margin-top: 20px; 
 `;
 
 export const BtnZone = styled.div`
