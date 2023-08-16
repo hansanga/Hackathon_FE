@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import * as S from '../../../../styles/CategoryComponents/App.styled';
+import React from 'react';
+import axios from 'axios';
+import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
