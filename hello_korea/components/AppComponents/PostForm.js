@@ -25,12 +25,11 @@ function PostForm() {
 
   const handleSubmit = () => {
     // e.preventDefault();
-    const hashtagArray = hashtag.split(',').map(tag => tag.trim());
     const requestData = {
       title,
       contents,
       serviceLink,
-      hashtag: hashtagArray
+      hashtag
     };
 
     // const postData = {
