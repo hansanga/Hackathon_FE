@@ -56,7 +56,7 @@ export default function Pass() {
                     iconSrc1='\AppIcon\Pass.png'
                     appName={data.title}
                     text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
-                    appInfo='\AppInfo\pass.png'
+                    appInfo='/AppInfo/pass.png'
                     handleDownload={handleDownload}
                     handleShare={handleShare}
                     />
