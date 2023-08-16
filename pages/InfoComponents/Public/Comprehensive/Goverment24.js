@@ -46,11 +46,11 @@ export default function Goverment() {
         }
     };
 
+
     return (
         <S.Wrapper>
             <S.Container>
                 <Header />
-                {data ? (
                     <Body
                         iconSrc1='\AppIcon\Goverment24.png'
                         appName={data.title}
@@ -59,9 +59,6 @@ export default function Goverment() {
                         handleShare={handleShare}
 
                     />
-                ) : (
-                    <p>Loading...</p>
-                )}
             </S.Container>
         </S.Wrapper>
     );

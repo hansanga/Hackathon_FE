@@ -8,7 +8,7 @@ export default function CGV() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}'); // 예시 엔드포인트, 실제 사용하는 API 엔드포인트로 수정해야 함
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}'); // 백엔드 API 엔드포인트
             const jsonData = await response.json();
             setData(jsonData); // API로부터 받은 데이터를 상태에 저장
         } catch (error) {
@@ -46,11 +46,11 @@ export default function CGV() {
         }
     };
 
+
     return (
         <S.Wrapper>
             <S.Container>
                 <Header />
-                {data ? (
                     <Body
                         iconSrc1='\AppIcon\Cgv.png'
                         appName={data.title} // API 응답 데이터에 있는 앱 이름 필드
@@ -58,9 +58,6 @@ export default function CGV() {
                         handleDownload={handleDownload}
                         handleShare={handleShare}
                     />
-                ) : (
-                    <p>Loading...</p>
-                )}
             </S.Container>
         </S.Wrapper>
     );

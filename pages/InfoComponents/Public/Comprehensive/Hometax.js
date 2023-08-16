@@ -5,19 +5,28 @@ import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
 export default function Hometax() {
-    const handleDownload = async () => {
-        try {
-            const response = await axios.post('your_download_api_endpoint', {
-                title: 'test_59fdbe81a9e4',
-                contents: 'test_39d093cca35f',
-                serverLink: 'test_2d7f82b16f0b',
-                hashtag: 'happ, hap, happy , d , dd , dddd, anna'
-            });
+    const [data, setData] = useState(null); // API로부터 받아온 데이터를 저장할 상태
 
-            // Handle response here if needed
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}'); // 백엔드 API 엔드포인트
+            const jsonData = await response.json();
+            setData(jsonData); // API로부터 받은 데이터를 상태에 저장
         } catch (error) {
-            console.error('Error during download:', error);
-            alert('Download failed. Please try again later.');
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData(); // 컴포넌트가 렌더링될 때 데이터를 가져오도록 설정
+    }, []);
+
+    const handleDownload = () => {
+        // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
+        if (navigator.userAgent.match(/Android/i)) {
+            window.location.href = 'https://play.google.com/store/search?q=%ED%99%88%ED%83%9D%EC%8A%A4&c=apps&hl=ko-KR';
+        } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+            window.location.href = 'https://apps.apple.com/kr/app/%EA%B5%AD%EC%84%B8%EC%B2%AD-%ED%99%88%ED%83%9D%EC%8A%A4-%EC%86%90%ED%83%9D%EC%8A%A4/id495157796';
         }
     };
 
@@ -26,24 +35,14 @@ export default function Hometax() {
             if (navigator.share) {
                 await navigator.share({
                     title: 'catchKorea',
-                    text: '내용..',
+                    text: '내용,,,',
                     url: window.location.href,
                 });
-
-                // After successful share, send API request
-                const response = await axios.post('your_share_api_endpoint', {
-                    title: 'test_59fdbe81a9e4',
-                    contents: 'test_39d093cca35f',
-                    serverLink: 'test_2d7f82b16f0b',
-                    hashtag: 'happ, hap, happy , d , dd , dddd, anna'
-                });
-
-                // Handle response here if needed
             } else {
                 throw new Error('Web Share API not supported');
             }
         } catch (error) {
-            console.error('Error during sharing:', error);
+            console.error('Error sharing:', error);
             alert('Sharing failed. Please try again later.');
         }
     };
