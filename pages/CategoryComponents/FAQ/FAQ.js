@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './FAQ.styled'
+import * as S from '../../../styles/CategoryComponents/FAQ.styled'
 
 import Header from '../../../components/MainComponents/Header';
 

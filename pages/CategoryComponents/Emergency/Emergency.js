@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as S from './Emergency.styled'
+import * as S from '../../../styles/CategoryComponents/Emergency.styled'
 
 import Header from '../../../components/MainComponents/Header'
 
