@@ -8,7 +8,7 @@ export default function NaverMap() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/v2/api-docs/post/{category_id}');
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/v2/api-docs/post/5');
             const jsonData = await response.json();
 
             if (jsonData) {
