@@ -34,7 +34,7 @@ export const Title = styled.div `
 
 export const MenuBar = styled.div `
     display: flex;
-    listStyle: none;
+    /* listStyle: none; */
     margin: 5px;
     overflow-x: scroll;
     width: 100%;

@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
+import Link from 'next/link'
 
 export default function MobileID() {
+    const [data, setData] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
+            const jsonData = await response.json();
+
+            if (jsonData) {
+                setData(jsonData);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     const handleDownload = () => {
         // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
         if (navigator.userAgent.match(/Android/i)) {
-            window.location.href = 'https://play.google.com/store/apps/details?id=kr.go.mobileid&hl=ko-KR';
+            window.location.href = 'https://play.google.com/store/search?q=%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8&c=apps&hl=ko-KR';
         } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            window.location.href = 'https://apps.apple.com/kr/app/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%8B%A0%EB%B6%84%EC%A6%9D-%EC%9A%B4%EC%A0%84%EB%A9%B4%ED%97%88%EC%A6%9D-%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%93%B1%EB%A1%9D%EC%A6%9D/id1599450372';
+            window.location.href = 'https://apps.apple.com/kr/app/%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8/id395800058';
         }
     };
 
@@ -18,7 +38,7 @@ export default function MobileID() {
             if (navigator.share) {
                 await navigator.share({
                     title: 'catchKorea',
-                    text: '내용뭐라고,,,',
+                    text: '내용...',
                     url: window.location.href,
                 });
             } else {
@@ -33,16 +53,15 @@ export default function MobileID() {
         <S.Wrapper>
             <S.Container>
                 <Header/>
+                {data !== null && (
                 <Body
                     iconSrc1='\AppIcon\MobileID.png'
-                    appName='Mobile ID'
-                    text1={`
-                    Mobile ID is a ID that can be conveniently stored in personal smartphone, and you can also issue a driver's license.Foreigners who have foreign registration is also possible to issue mobile driver's license certificates.
-
-                    How to download : You can install on the app store or Play Store.`} 
+                    appName={data.title}
+                    text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                     handleDownload={handleDownload}
                     handleShare={handleShare}
                     />
+                    )}
             </S.Container>
         </S.Wrapper>
     );

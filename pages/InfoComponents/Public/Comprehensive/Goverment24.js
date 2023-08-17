@@ -1,49 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import * as S from '../../../../styles/CategoryComponents/App.styled';
+import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
-export default function Cgv() {
-    const [data, setData] = useState(null); // API로부터 받아온 데이터를 저장할 상태
+export default function Goverment() {
+    const [data, setData] = useState(null);
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/'); // 백엔드 API 엔드포인트
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
             const jsonData = await response.json();
-            setData(jsonData); // API로부터 받은 데이터를 상태에 저장
+
+            if (jsonData) {
+                setData(jsonData);
+            }
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
 
     useEffect(() => {
-        fetchData(); // 컴포넌트가 렌더링될 때 데이터를 가져오도록 설정
+        fetchData();
     }, []);
 
     const handleDownload = () => {
-        // 다운로드 로직은 그대로 유지
+        // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
+        if (navigator.userAgent.match(/Android/i)) {
+            window.location.href = 'https://play.google.com/store/search?q=%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8&c=apps&hl=ko-KR';
+        } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+            window.location.href = 'https://apps.apple.com/kr/app/%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8/id395800058';
+        }
     };
 
     const handleShare = async () => {
-        // 공유 로직은 그대로 유지
+        try {
+            if (navigator.share) {
+                await navigator.share({
+                    title: 'catchKorea',
+                    text: '내용...',
+                    url: window.location.href,
+                });
+            } else {
+                throw new Error('Web Share API not supported');
+            }
+        } catch (error) {
+            console.error('Error sharing:', error);
+            alert('Sharing failed. Please try again later.');
+        }
     };
 
     return (
         <S.Wrapper>
             <S.Container>
                 <Header />
-                {data ? (
+                {data !== null && (
                     <Body
-                        iconSrc1={data.iconSrc} // API 응답 데이터에 있는 이미지 경로 필드
-                        appName={data.appName} // API 응답 데이터에 있는 앱 이름 필드
-                        text1={data.appDescription} // API 응답 데이터에 있는 앱 설명 필드
-                        isselected={data.isSelected} // 수정된 부분
+                        iconSrc1='\AppIcon\Goverment24.png'
+                        appName={data.title}
+                        text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                         handleDownload={handleDownload}
                         handleShare={handleShare}
+
                     />
-                ) : (
-                    <p>Loading...</p>
-                )}
+                    )}
             </S.Container>
         </S.Wrapper>
     );

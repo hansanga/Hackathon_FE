@@ -8,8 +8,8 @@ export default function MenuBar({ menuVisible, onClick }) {
             
             <S.CloseButton onClick={onClick} src='/img/free-icon-x-657059.png'></S.CloseButton>
 
-            <a href="/MainComponents/Main/Main"><S.MenuIcon src='/img/Home.png' /></a>
-            <S.MenuText>Hello Korea</S.MenuText>
+{/*             <a href="/MainComponents/Main/Main"><S.MenuIcon src='/img/Home.png' /></a>
+ */}            <S.MenuText src='/img/CatchKorea.png'/>
          </S.Container>
 
 

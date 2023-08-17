@@ -24,7 +24,7 @@ export const Title = styled.div`
 
 export const MenuBar = styled.div`
     display: flex;
-    listStyle: none;
+    list-style: none;
     margin: 5px;
 
     & > li {

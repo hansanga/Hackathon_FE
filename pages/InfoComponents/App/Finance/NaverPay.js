@@ -1,15 +1,34 @@
-import React from 'react';
-import * as S from '../../../../styles/CategoryComponents/App.styled'
+import React, { useState, useEffect } from 'react'
+;import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
 export default function NaverPay() {
+    const [data, setData] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
+            const jsonData = await response.json();
+
+            if (jsonData) {
+                setData(jsonData);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     const handleDownload = () => {
         // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
         if (navigator.userAgent.match(/Android/i)) {
-            window.location.href = 'https://play.google.com/store/apps/details?id=com.naverfin.payapp&hl=ko-KR';
+            window.location.href = 'https://play.google.com/store/search?q=%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8&c=apps&hl=ko-KR';
         } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            window.location.href = 'https://apps.apple.com/kr/app/%EB%84%A4%EC%9D%B4%EB%B2%84%ED%8E%98%EC%9D%B4/id1554807824';
+            window.location.href = 'https://apps.apple.com/kr/app/%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8/id395800058';
         }
     };
 
@@ -18,7 +37,7 @@ export default function NaverPay() {
             if (navigator.share) {
                 await navigator.share({
                     title: 'catchKorea',
-                    text: '내용뭐라고,,,',
+                    text: '내용...',
                     url: window.location.href,
                 });
             } else {
@@ -33,16 +52,16 @@ export default function NaverPay() {
         <S.Wrapper>
             <S.Container>
                 <Header/>
+                {data !== null && (
                 <Body
+                
                     iconSrc1='\AppIcon\NaverPay.png'
-                    appName='NaverPay'
-                    text1={`
-                    "Naver Pay" app is a mobile payment and financial services application created by South Korea's prominent internet portal, Naver.  
-
-                    How to download : You can install on the app store or Play Store.`} 
+                    appName={data.title}
+                    text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                     handleDownload={handleDownload}
                     handleShare={handleShare}
                     />
+                     )}
             </S.Container>
         </S.Wrapper>
     );

@@ -1,7 +1,6 @@
 // 각 카테고리 클릭시 나오는 컨텐츠 파일 분리
 import React from 'react';
 import * as S from "./Body.styled";
-import TipBox from '../../../components/TipComponents/TipBox';
 import Cultural from './Category/Cultural';
 import Sns from './Category/Sns';
 import Search from './Category/Search';
@@ -68,7 +67,7 @@ export default function Body({selectedItem, onItemClick}) {
                 }
             </S.MenuBar>
             <S.Line/>
-            <TipBox/> 
+            
             {contentComponent}
             <S.CopyrightContainer>
                 <S.Copyright>@ Copyright</S.Copyright>

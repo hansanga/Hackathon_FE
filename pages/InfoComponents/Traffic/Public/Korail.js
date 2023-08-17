@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from '../../../../styles/CategoryComponents/App.styled'
 import Header from '../../../../components/InfoComponents/Header';
 import Body from '../../../../components/InfoComponents/Body';
 
 export default function KaKaoSubway() {
+    const [data, setData] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
+            const jsonData = await response.json();
+
+            if (jsonData) {
+                setData(jsonData);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     const handleDownload = () => {
         // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
         if (navigator.userAgent.match(/Android/i)) {
-            window.location.href = 'https://play.google.com/store/search?q=%EC%BD%94%EB%A0%88%EC%9D%BC&c=apps&hl=ko-KR';
+            window.location.href = 'https://play.google.com/store/search?q=%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8&c=apps&hl=ko-KR';
         } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            window.location.href = 'https://apps.apple.com/kr/app/%EC%BD%94%EB%A0%88%EC%9D%BC%ED%86%A1/id1000558562';
+            window.location.href = 'https://apps.apple.com/kr/app/%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8/id395800058';
         }
     };
 
@@ -18,7 +37,7 @@ export default function KaKaoSubway() {
             if (navigator.share) {
                 await navigator.share({
                     title: 'catchKorea',
-                    text: '내용뭐라고,,,',
+                    text: '내용...',
                     url: window.location.href,
                 });
             } else {
@@ -29,18 +48,20 @@ export default function KaKaoSubway() {
             alert('Sharing failed. Please try again later.');
         }
     };
+
     return (
         <S.Wrapper>
             <S.Container>
                 <Header/>
+                {data !== null && (
                 <Body
                     iconSrc1='\AppIcon\Korail.png'
-                    appName='Korail Talk'
-                    text1={`
-                    Korail Talk is an application that allows you to reserve tickets and regular boarding passes and check tickets, and to reserve various trains such as KTX, Saemaeul, and Mugunghwa.`}
+                    appName={data.title}
+                    text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                     handleDownload={handleDownload}
-                    handleShare={handleShare} 
+                    handleShare={handleShare}
                     />
+                    )}
             </S.Container>
         </S.Wrapper>
     );
