@@ -24,16 +24,24 @@ export default function Body(){
             </S.MenuTabTitle>
          </S.MenuTabImg>
 
-
          <S.Line />
          <S.MenuBottom1>
-            <S.MenuBottom1Icon src='img/free-icon-siren-883345.png' />
-            <S.MenuBottom1Text>Emergency/Medical Hotline</S.MenuBottom1Text>
-         </S.MenuBottom1>
-         <S.MenuBottom2>
-            <S.MenuBottom2Icon src='img/Question answer.png' />
-            <S.MenuBottom1Text>FAQ</S.MenuBottom1Text>
 
+        <Link href="/CategoryComponents/Emergency/Emergency">
+            <a>
+               <S.MenuBottom1Icon src='img/free-icon-siren-883345.png' />
+               <S.MenuBottom1Text>Emergency/Medical Hotline</S.MenuBottom1Text>
+            </a>
+         </Link>
+         </S.MenuBottom1>
+
+         <S.MenuBottom2>
+         <Link href="/CategoryComponents/FAQ/FAQ">
+            <a>
+               <S.MenuBottom2Icon src='img/Question answer.png' />
+               <S.MenuBottom1Text>FAQ</S.MenuBottom1Text>
+            </a>
+         </Link>
          </S.MenuBottom2>
 
          <S.CopyrightContainer>
