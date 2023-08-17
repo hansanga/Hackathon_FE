@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from '../../../styles/CategoryComponents/Emergency.styled'
 
-import Header from '../../../components/MainComponents/Header'
+import Header from '../../../components/InfoComponents/Header'
 
 export default function Emergency(){
    const [isInfoVisible, setIsInfoVisible] = useState(false);

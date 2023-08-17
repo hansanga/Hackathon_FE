@@ -69,7 +69,7 @@ export default function Content() {
         // API에서 메뉴 데이터를 가져오는 함수
         const fetchMenuData = async () => {
             try {
-                const response = await axios.get('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}'); 
+                const response = await axios.get('https://catchkorea-a5799a624288.herokuapp.com/'); 
                 setMenuData(response.data); // API에서 받아온 데이터를 상태에 저장
             } catch (error) {
                 console.error('Error fetching menu data:', error);
@@ -85,7 +85,7 @@ export default function Content() {
                 <MenuBox
                     key={menu.title} // 메뉴마다 고유한 키를 사용
                     link={menu.serviceLink}
-                    iconSrc={menu.iconSrc}
+                    iconSrc={`${menu.imageLink}.png`}
                     text1={menu.title}
                     text2={menu.contents}
                     hashtag1={menu.hashtag} // menu 객체의 hashtag 필드 사용
