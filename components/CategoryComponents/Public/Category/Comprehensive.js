@@ -83,9 +83,8 @@ export default function Content() {
         <>
             {menuData.map(menu => (
                 <MenuBox
-                    key={menu.title} // 메뉴마다 고유한 키를 사용
                     link={menu.serviceLink}
-                    iconSrc={`${menu.imageLink}.png`}
+                    iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
                     hashtag1={menu.hashtag} // menu 객체의 hashtag 필드 사용
